@@ -1,0 +1,54 @@
+@import "../colors.scss";
+
+%button {
+    border-radius: 10px;
+    background: $blue;
+    color: white;
+    height: 35px; 
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s linear 0s;
+    font-weight: 600;
+    font-size: inherit;
+    font-family: inherit;
+    &:hover {
+        box-shadow: 0px 5px 10px 0px rgba(80, 140, 225, 0.516);
+        border: none;
+        transform: scale(1.04);
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    border-bottom: 2px solid grey;
+    height: 70px;
+    background: rgba(206, 200, 200, 0.265);
+    .nav {
+        width: 700px;
+        margin-right: 30%;
+        .menu {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            list-style-type: none;
+            .item {
+                text-decoration: none;
+                color: inherit;
+                padding-bottom: 5px;
+                white-space: nowrap;
+                margin-right: 20px;
+                &:hover {
+                    color: rgb(42, 74, 134);
+                    border-bottom: 1.5px solid rgb(42, 74, 134);
+                }
+            }  
+        }
+    }
+    .btn {
+        @extend %button;
+        width: 100px;       
+    }    
+}

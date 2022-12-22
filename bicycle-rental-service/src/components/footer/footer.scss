@@ -1,0 +1,14 @@
+.footer {
+  border-top: 2px solid grey;
+  border-bottom: none;
+  justify-content: space-between;
+  .contacts {
+    display: flex;
+    align-items: center;
+    img {
+      width: 30px;
+      margin-top: 5px;
+      margin-left: 30px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.logo {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  .image {
+      margin: 0 10px;
+  }
+  .name {
+    white-space: nowrap;
+  }
+  .image-turn {
+    transform: scale(-1, 1);
+  }
+}

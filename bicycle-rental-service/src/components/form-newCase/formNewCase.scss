@@ -1,0 +1,77 @@
+@import "../header/header.scss";
+
+.new-case {
+  width: 100%;
+  background-image: url("../../assets/form.png"), url("../../assets/search.png");
+  background-repeat: no-repeat;
+  background-position: 1% 30%, 115%;
+  background-size: 30%, 45%;
+  display: flex;
+  justify-content: center;
+  .window-case {
+    width: 500px;
+    background: rgba(255, 255, 255, 0.614);
+    padding: 20px;
+    border-radius: 10px;
+    align-self: center;
+    .title {
+      margin-top: 10px;
+    }
+    .form-case {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      grid-row-gap: 15px;
+      margin-bottom: 30px;
+      .label {
+        align-self: center;
+      }
+      .input {
+        outline: none;
+        font-size: inherit;
+        padding: 3px;
+        font-family: inherit;
+      }
+      .date::placeholder {
+        opacity: 0.5;
+      }
+      .textarea {
+        resize: none;
+        height: 100px;
+        cursor: auto;
+        &::-webkit-scrollbar {
+          width: 12px;
+          background-color: #f9f9fd;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: #CBCBCB;
+          border-radius: 5px;
+        }
+      }
+      .footnote {
+        font-size: 12px;
+        align-self: center;
+      }
+      .btn {
+        @extend %button;
+        margin-top: 10px;
+        width: 150px;
+        justify-self: end;
+      }
+    }
+    .thanks {
+      margin: 0;
+      font-weight: 600;
+    }
+    .unvisible {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 5s, opacity 0.5s linear;
+    }  
+    .visible {
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 5s, opacity 0.5s linear;
+    }
+  }
+}
+

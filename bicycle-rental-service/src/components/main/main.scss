@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  height: 100%;
+  background: rgba(168, 197, 199, 0.368);
+  .main-page {
+    background-position: 100% 10%;
+    background-size: 60%;
+    background-image: url("../../assets/theft.png");
+    background-repeat: no-repeat;
+  }
+  .content {
+    width: 40%;
+    padding: 200px 30px 0 60px;
+  }
+}
