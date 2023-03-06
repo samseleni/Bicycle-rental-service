@@ -1,17 +1,16 @@
 import React from "react";
 import { useState } from "react";
 import "./formNewCase.scss";
-import { BIKE_TYPE } from "../../config";
-import { addCase } from "../storage/action";
-import { useDispatch } from "react-redux";
+import { addCase } from "../../storage/action";
+import { useDispatch, useSelector } from "react-redux";
 import uniqid from "uniqid";
-import { formatDate } from "../../utils";
-
 
 const FormNewCase = () => {
-
+  
   const curDate = new Date();
   const dispath = useDispatch();
+  const officers = useSelector(state => state.officers);
+  const isLogin = useSelector(state => state.isLogin);
 
   const initialCase = {
     status: "new",
@@ -19,7 +18,8 @@ const FormNewCase = () => {
     type: "",
     ownerFullName: "",
     clientId: uniqid(),
-    createdAt: formatDate(curDate),
+    id: uniqid(),
+    createdAt: "",
     updatedAt: "",
     color: "",
     date: "",
@@ -64,11 +64,10 @@ const FormNewCase = () => {
             onChange={handleChange}
             required />
           <label htmlFor="type">Тип велосипеда<span style={{color: "red"}}>*</span></label>
-          <select className="input" name="type" onChange={handleChange} required style={{cursor: "pointer"}}>
+          <select className="input" name="type" onChange={handleChange} required style={{cursor: "pointer"}} type='text'>
             <option value=""></option>
-            {BIKE_TYPE.map((type) => {
-              return (<option key={type} value={type}>{type}</option>)
-            })}
+            <option value="спортивный">спортивный</option>
+            <option value="дорожный">дорожный</option>
           </select>
           <label className="label" htmlFor="color">Цвет велосипеда</label>
           <input 
@@ -90,6 +89,19 @@ const FormNewCase = () => {
             name="description" 
             type="text" 
             onChange={handleChange} />
+          {isLogin && (
+            <>  
+              <label className="label" htmlFor="officer">Ответственный сотрудник</label>
+              <select className="input" name="officer" onChange={handleChange} style={{cursor: "pointer"}}>
+                <option value=""></option>
+                {officers.map((officer) => {
+                  if (officer.approved === "true")  
+                    return (<option key={officer.lastname} value={`${officer.firstName} ${officer.lastName}`}>{officer.firstName} {officer.lastName}</option>)
+                })}
+              </select>
+            </>
+            )
+          }
           <p className="footnote"><span style={{color: "red"}}>*</span>Обязательное поле</p>
           <button className="btn" type="submit">Отправить</button>
         </form>

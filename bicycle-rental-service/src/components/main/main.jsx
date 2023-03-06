@@ -5,8 +5,13 @@ import FormLogin from "../form-login/formLogin";
 import FormNewCase from "../form-newCase/formNewCase";
 import Cases from "../cases/cases";
 import CaseDetail from "../caseDetail/caseDetail";
+import Officers from "../officers/officers";
+import OfficerDetail from "../officerDetail/officerDetail";
+import { useSelector } from "react-redux";
+import Error from "../error/error";
 
 const Main = () => {
+  const isLogin = useSelector(state => state.isLogin);
   return (
     <main className="main">
       <Routes>
@@ -26,9 +31,10 @@ const Main = () => {
         } />
         <Route path={"/login"} element={<FormLogin />} />
         <Route path={"/new-case"} element={<FormNewCase />} />
-        <Route path={"/cases"} element={<Cases />} />
-        <Route path={"/cases"} element={<Cases />} />
-        <Route path={"/cases/caseId"} element={<CaseDetail />} />
+        <Route path={"/cases"} element={isLogin ? <Cases /> : <Error />} />
+        <Route path={"/cases/:caseId"} element={isLogin ? <CaseDetail /> : <Error />} />
+        <Route path={"/officers"} element={isLogin ? <Officers /> : <Error />} />
+        <Route path={"/officers/:officerId"} element={isLogin ? <OfficerDetail /> : <Error />} />  
       </Routes>
     </main>
   )

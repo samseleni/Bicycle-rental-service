@@ -1,0 +1,54 @@
+@import "../colors.scss";
+
+%table-container {
+  margin-top: 20px;
+  overflow: auto;
+  border: 2px solid grey;
+  margin: auto;
+  width: fit-content;
+  .table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    text-align: center;
+    margin: auto;
+    .head {
+      background: $blue;
+      .head-item {
+        width: 150px;
+        padding: 10px;
+        letter-spacing: 1.5px;
+        font-weight: 700;
+      }
+      .head-item:nth-child(2),  .head-item:nth-child(6){
+        width: 300px;
+      }
+    }
+    .body {
+      .body-item {
+        padding: 10px;
+        .link {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+      tr:nth-child(odd) {
+        background: white;
+      }
+      tr:nth-child(even) {
+        background: rgba(239, 228, 228, 0.509);
+      }
+      .btn {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.list {
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+    .table-container {
+      @extend %table-container
+    }
+}

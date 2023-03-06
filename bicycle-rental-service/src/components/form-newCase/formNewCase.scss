@@ -1,4 +1,5 @@
 @import "../header/header.scss";
+@import "../colors.scss";
 
 .new-case {
   width: 100%;
@@ -10,7 +11,7 @@
   justify-content: center;
   .window-case {
     width: 500px;
-    background: rgba(255, 255, 255, 0.614);
+    background: $white;
     padding: 20px;
     border-radius: 10px;
     align-self: center;

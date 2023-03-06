@@ -1,0 +1,105 @@
+@import "../colors.scss";
+@import "../header/header.scss";
+
+
+.caseDetail {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-height: 100%;
+  overflow: hidden;
+  background: $white;
+  border-radius: 10px;
+  padding: 0 20px;
+  
+  .title { 
+    text-align: center;
+    margin: 20px;
+  }
+  .btn {
+    align-self: flex-end;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 1 px solid grey;
+    font: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      background-color: $blue;
+      color: white;
+      border: 1px solid grey;
+      border-radius: 2px;
+    }
+  }
+  .button-edit {
+    .img-edit {
+      width: 20px;
+      margin-right: 10px;
+    }
+  }
+  .form-case {
+    max-height: 500px;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-row-gap: 25px;
+    grid-column-gap: 100px;
+    margin-bottom: 30px;
+    padding: 40px 20px 20px 20px;
+    border-top: 1px solid grey;
+    &::-webkit-scrollbar {
+      width: 12px;
+      background-color: #f9f9fd;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #CBCBCB;
+      border-radius: 5px;
+    }
+    .input {
+      outline: none;
+      font-size: inherit;
+      padding: 3px;
+      font-family: inherit;
+      height: 30px;
+      &:disabled {
+        background: none;
+        border: none;
+        font: inherit;
+        color: inherit;
+      }
+
+    }
+    select {
+      &:disabled {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        color: black;
+        &:hover {
+          cursor: none;
+        }
+      }
+    }
+    .textarea {
+      resize: none;
+      max-height: 100px;
+      display: block;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 12px;
+        background-color: #f9f9fd;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #CBCBCB;
+        border-radius: 5px;
+      }
+    }
+    .empty {
+      height: 1rem;
+      overflow: auto;
+    }
+  }
+}

@@ -19,8 +19,10 @@
 //     <div className="input">
 //       <label className="label" htmlFor="licenseNumber">Номер лицензии<span style={{color: "red"}}>*</span></label>
 //       <input
+//         value={}
 //         className="input" 
 //         name="licenseNumber" 
+//         id="licenseNumber" 
 //         type="text" 
 //         onChange={handleChange}
 //         required />
@@ -28,11 +30,12 @@
 //       <input
 //         className="input" 
 //         name="ownerFullName" 
+//         id="ownerFullName" 
 //         type="text" 
 //         onChange={handleChange}
 //         required />
 //       <label htmlFor="type">Тип велосипеда<span style={{color: "red"}}>*</span></label>
-//       <select className="input" name="type" onChange={handleChange} required style={{cursor: "pointer"}}>
+//       <select className="input" name="type" id="type" onChange={handleChange} required style={{cursor: "pointer"}}>
 //         <option value=""></option>
 //         <option value="дорожный">дорожный</option>
 //         <option value="спортивный">спортивный</option>
@@ -41,12 +44,14 @@
 //       <input 
 //         className="input" 
 //         name="color" 
+//         id="color"
 //         type="text" 
 //         onChange={handleChange} />
 //       <label className="label" htmlFor="date">Дата кражи</label>
 //       <input 
 //         className="input date" 
 //         name="date" 
+//         id="date"
 //         type="date" 
 //         min="2022-01-01"
 //         max={`${curDate.getFullYear()}-${curDate.getMonth()+1}-${curDate.getDate()}`}
@@ -55,6 +60,7 @@
 //       <textarea
 //         className="input textarea" 
 //         name="description" 
+//         id="description"
 //         type="text" 
 //         onChange={handleChange} />
 //     </div>
@@ -62,4 +68,4 @@
 //   )
 // }
 
-// export default Input
+// export default Input;

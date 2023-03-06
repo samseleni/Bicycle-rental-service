@@ -1,9 +1,10 @@
-import './App.css';
+import './App.scss';
 import React from 'react';
 import Header from './components/header/header';
 import Main from './components/main/main';
 import Footer from './components/footer/footer';
 import { BrowserRouter } from "react-router-dom";
+
 function App() {
   return (
     <BrowserRouter>

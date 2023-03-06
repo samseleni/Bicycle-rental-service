@@ -22,13 +22,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
     padding: 0 60px;
     border-bottom: 2px solid grey;
     height: 70px;
     background: rgba(206, 200, 200, 0.265);
     .nav {
-        width: 700px;
-        margin-right: 30%;
+        // width: 700px;
+        // margin-right: 30%;
         .menu {
             display: flex;
             width: 100%;
@@ -40,11 +41,11 @@
                 padding-bottom: 5px;
                 white-space: nowrap;
                 margin-right: 20px;
-                &:hover {
-                    color: rgb(42, 74, 134);
-                    border-bottom: 1.5px solid rgb(42, 74, 134);
-                }
             }  
+            .item:hover, .active {
+                color: rgb(42, 74, 134);
+                border-bottom: 1.5px solid rgb(42, 74, 134);
+            }
         }
     }
     .btn {

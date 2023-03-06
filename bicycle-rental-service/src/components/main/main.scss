@@ -2,14 +2,17 @@
   display: flex;
   height: 100%;
   background: rgba(168, 197, 199, 0.368);
+  width: 100vw;
   .main-page {
-    background-position: 100% 10%;
-    background-size: 60%;
+    width: 100%;
+    background-position: 600px 0;
+    background-size: 850px;
     background-image: url("../../assets/theft.png");
     background-repeat: no-repeat;
-  }
-  .content {
-    width: 40%;
-    padding: 200px 30px 0 60px;
+    display: flex;
+    .content {
+      width: 550px;
+      padding: 200px 30px 0 60px;
+    }
   }
 }
