@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Bicycle-rental-service/static/css/main.d88c38d7.css",
-    "main.js": "/Bicycle-rental-service/static/js/main.8595f918.js",
+    "main.js": "/Bicycle-rental-service/static/js/main.86301c73.js",
     "static/media/theft.png": "/Bicycle-rental-service/static/media/theft.df2b2a2f92b6424a695e.png",
     "static/media/search.png": "/Bicycle-rental-service/static/media/search.32dce2dfdb7845e17ca5.png",
     "static/media/form.png": "/Bicycle-rental-service/static/media/form.4db237a79a6a2c469421.png",
@@ -14,10 +14,10 @@
     "static/media/email.svg": "/Bicycle-rental-service/static/media/email.c4cc08c97c3f485283422b5c9117bb67.svg",
     "static/media/edit.svg": "/Bicycle-rental-service/static/media/edit.5b4bbee2e91b8855115c2a1dabf81f38.svg",
     "main.d88c38d7.css.map": "/Bicycle-rental-service/static/css/main.d88c38d7.css.map",
-    "main.8595f918.js.map": "/Bicycle-rental-service/static/js/main.8595f918.js.map"
+    "main.86301c73.js.map": "/Bicycle-rental-service/static/js/main.86301c73.js.map"
   },
   "entrypoints": [
     "static/css/main.d88c38d7.css",
-    "static/js/main.8595f918.js"
+    "static/js/main.86301c73.js"
   ]
 }
